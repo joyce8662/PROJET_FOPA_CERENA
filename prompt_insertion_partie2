@@ -1,0 +1,32 @@
+Génère un script SQL d’insertion de données réalistes pour une base de données MySQL de télé-médecine.
+
+La base contient les tables suivantes avec leurs relations :
+UTILISATEUR, PATIENT, MEDECIN, SPECIALITE, MEDECIN_SPECIALITE, ETABLISSEMENT, MEDECIN_ETABLISSEMENT, DISPONIBILITE, RENDEZ_VOUS, CONSULTATION, AVIS, PAIEMENT, CONSULTATION_PAIEMENT.
+
+Contraintes importantes à respecter :
+
+* UTILISATEUR.type ∈ ('patient', 'medecin')
+* email valide et unique
+* SPECIALITE et ETABLISSEMENT doivent exister avant leurs associations
+* PATIENT.id_patient et MEDECIN.id_medecin correspondent à UTILISATEUR.id_utilisateur
+* DISPONIBILITE.jour_semaine entre 1 et 7
+* RENDEZ_VOUS.statut ∈ ('A venir','Confirmé','Terminé','Annulé patient','Annulé médecin')
+* AVIS.note entre 1 et 5
+* PAIEMENT.mode_paiement ∈ ('CB','Carte Vitale','Mutuelle')
+* PAIEMENT.statut ∈ ('En attente','Validé','Remboursé')
+* Les clés étrangères doivent être respectées
+* L’ordre d’insertion doit respecter les dépendances entre tables.
+
+Générer :
+
+* environ 5 spécialités
+* 3 établissements
+* 3 médecins
+* 3 patients
+* des disponibilités cohérentes
+* des rendez-vous correspondant aux disponibilités
+* une consultation par rendez-vous
+* un avis par consultation terminée
+* un paiement par consultation
+
+Le résultat doit être un fichier SQL nommé "3_insertion.sql" contenant uniquement des requêtes INSERT INTO valides pour MySQL.
