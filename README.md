@@ -208,13 +208,71 @@ _____________________________________________________________________
 
 # Scénario d'utilisation :
 
-La base de données sera utilisée par un administrateur de la plateforme de télémédecine
-On cherchera à superviser l’activité médicale : à savoir les médecins et patients inscrits, rendez-vous, consultations et paiements.
-L’administrateur doit pouvoir :
--	Consulter la liste des médecins et leur spécialisation
--	Voir les disponibilités des médecins
--	Consulter les rdvs programmés
--	Avoir les données des consultations effectuées
--	Consulter les avis laissés par les patients
--	Suivre les paiements réalisés pour les consultations
+  📋 Scénarios d'utilisation pour la plateforme de télémédecine
+  
+Scénario 1 : Service Marketing - Analyse des tendances de consultation
+Rôle : Responsable Marketing
+Objectif : Identifier les spécialités les plus demandées et les créneaux horaires populaires pour optimiser les campagnes publicitaires et recruter de nouveaux médecins.
+
+Données à extraire :
+
+Top 5 des spécialités avec le plus de rendez-vous
+
+Répartition des rendez-vous par jour de la semaine
+
+Taux de croissance mensuel des consultations
+
+Médecins les plus sollicités
+
+Périodes de la journée les plus chargées
+
+Scénario 2 : Direction Médicale - Suivi de la qualité des soins
+Rôle : Directeur médical
+Objectif : Évaluer la satisfaction des patients et identifier les médecins nécessitant un accompagnement ou une formation.
+
+Données à extraire :
+
+Note moyenne par médecin (avec filtre sur minimum d'avis)
+
+Médecins avec les meilleures et moins bonnes notes
+
+Évolution des notes dans le temps
+
+Avis négatifs (note < 3) avec commentaires
+
+Taux de recommandation par spécialité
+
+Scénario 3 : Service Facturation - Analyse financière
+Rôle : Responsable financier
+Objectif : Analyser le chiffre d'affaires, les modes de paiement et détecter d'éventuelles anomalies.
+
+Données à extraire :
+
+Chiffre d'affaires mensuel par spécialité
+
+Répartition des paiements par mode (CB, Carte Vitale, Mutuelle)
+
+Paiements en attente ou en retard
+
+Montant moyen d'une consultation par médecin
+
+Patients avec le plus de consultations (fidélité)
+
+Scénario 4 : Support Technique - Sécurité et traçabilité
+Rôle : Administrateur système
+Objectif : Surveiller les connexions suspectes et assurer la traçabilité des accès.
+
+Données à extraire :
+
+Utilisateurs avec connexions depuis plusieurs IP différentes
+
+Connexions en dehors des heures ouvrables
+
+Dernières connexions des utilisateurs inactifs
+
+Statistiques de connexion par type d'utilisateur
+
+Adresses IP suspectes (tentatives multiples)
+
+
 
