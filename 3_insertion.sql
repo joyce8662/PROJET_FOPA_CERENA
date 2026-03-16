@@ -1,5 +1,24 @@
 -- 3_insertion.sql
+-- Désactiver les contraintes de clés étrangères
+SET FOREIGN_KEY_CHECKS = 0;
 
+-- Vider toutes les tables
+TRUNCATE TABLE CONSULTATION_PAIEMENT;
+TRUNCATE TABLE PAIEMENT;
+TRUNCATE TABLE AVIS;
+TRUNCATE TABLE CONSULTATION;
+TRUNCATE TABLE RENDEZ_VOUS;
+TRUNCATE TABLE DISPONIBILITE;
+TRUNCATE TABLE MEDECIN_ETABLISSEMENT;
+TRUNCATE TABLE MEDECIN_SPECIALITE;
+TRUNCATE TABLE PATIENT;
+TRUNCATE TABLE MEDECIN;
+TRUNCATE TABLE UTILISATEUR;
+TRUNCATE TABLE ETABLISSEMENT;
+TRUNCATE TABLE SPECIALITE;
+
+-- Réactiver les contraintes de clés étrangères
+SET FOREIGN_KEY_CHECKS = 1;
 USE TELEMEDECINE;
 
 -- -------------------
@@ -104,7 +123,7 @@ INSERT INTO AVIS (id_consultation, note, commentaire) VALUES
 -- PAIEMENTS
 -- -------------------
 INSERT INTO PAIEMENT (montant, mode_paiement, statut) VALUES
-(30.00,'CB','Validé'),
+(10.00,'CB','Validé'),
 (50.00,'Carte Vitale','Remboursé'),
 (70.00,'Mutuelle','En attente'),
 (45.00,'CB','En attente');
@@ -113,7 +132,7 @@ INSERT INTO PAIEMENT (montant, mode_paiement, statut) VALUES
 -- CONSULTATION_PAIEMENT
 -- -------------------
 INSERT INTO CONSULTATION_PAIEMENT (id_consultation, id_paiement, montant_partiel) VALUES
-(1,1,30.00),
+(1,1,10.00),
 (2,2,50.00),
 (3,3,70.00),
 (4,4,45.00);
