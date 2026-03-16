@@ -258,6 +258,5 @@ Montant moyen d'une consultation par médecin
 
 Patients avec le plus de consultations (fidélité)
 
-![MCD](assert/Capture)
-
+![MCD](assert/Capture%20d'%C3%A9cran%202026-03-13%20131745.png)
 
